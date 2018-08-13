@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+html{
+  height:100%;
+}
+
+body{
+  height:100%;
+  overflow:hidden;
+  font-size:14px;
+}
+
+h1 {
+  font-weight:bold;
+}
+
+#wrapper{
+  width:100%;
+  height:100%;
+  text-align:center;
+  color:#111;
+}
+
+#wrapper.loader {
+  background: url("images/spinner.svg") no-repeat 50% 46% transparent;
+}
+
+#wrapper-inner{
+  font-size:20px;
+  text-align:left;
+  visibility:hidden;
+}
+
+</style>
+</head>
+<body>
+  <div id="wrapper" class="loader"></div>
+  </div>
+  <script src="js/jquery.js"></script>
+  <script type="text/javascript">
+
+  $(".loader").show().delay(3000).fadeOut();
+
+  </script>
+</body>
+</html>

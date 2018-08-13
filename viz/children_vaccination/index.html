@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8' />
+  <title>Version 1</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+
+<body>
+
+  <div id="viz-container">
+
+    <div id="side-bar-container-one">
+
+      <div id="sb-title-cont">
+        <div class="sb-main-title-one"> Changes in child population and vaccination rates</div>
+        <div class="sb-main-title-two"> Changes in child population and vaccination rates </div>
+      </div>
+      <div id="legends-cont">
+      <div id="fly-legend-cont">
+        <div class="city-legend-bar-title">Select a City </div>
+        <button id="dakar">Dakar</button>
+        <button id="ougadadougou">Ougadadougou</button>
+        <button id="bamako">Bamako</button>
+      </div>
+        <div class="legend-one-cont">
+          <nav class='legend-one'>
+            <div class="vacc-legend-bar-title" style="width:75%;padding-left:45px;">Vaccination cover (%)</div>
+            <span class="cl-one" style='background:#e1f7d1; margin-left:7px;'></span>
+            <span class="cl-one" style='background:#d8f5c2;'></span>
+            <span class="cl-one" style='background:#b2eb88;'></span>
+            <span class="cl-one" style='background:#69c922;'></span>
+            <span class="cl-one" style='background:#1d3809;'></span>
+
+            <label class="cl-one-vals" style='background:#343332; padding-left:7px; margin-left:7px;'>0-50</label>
+            <label class="cl-one-vals" style='background:#343332; padding-left:2px'>50-65</label>
+            <label class="cl-one-vals" style='background:#343332;'>65-75</label>
+            <label class="cl-one-vals" style='background:#343332;'>75-85</label>
+            <label class="cl-one-vals" style='background:#343332;padding-left:8px'>85+</label>
+          </nav>
+        </div>
+        <div class="legend-two-cont">
+          <div class="legend-horiz-bar-cont">
+            <div class="vacc-legend-bar-title">Children's Poulation size (/Km<sup>2</sup>)</div>
+            <div class="legend-horiz-bar" style="height: 1px; margin-top: 119px"></div>
+            <div class="legend-horiz-bar" style="height: 30px; margin-top:90px"></div>
+            <div class="legend-horiz-bar" style="height: 60px;margin-top:60px"></div>
+            <div class="legend-horiz-bar" style="height: 80px;margin-top:40px"></div>
+            <div class="legend-horiz-bar" style="height: 100px; margin-top:20px"></div>
+          </div>
+          <div class="legend-hor-bar-title-cont">
+            <div class="legend-horiz-bar-title" style="margin-left:2em">1</div>
+            <div class="legend-horiz-bar-title" style="margin-left:2em">Count</div>
+            <div class="legend-horiz-bar-title" style="margin-left:4.5em"> 5000</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="maps-container">
+      <div class="sb-main-title-two"> Changes in child population and vaccination rates </div>
+      <div id='map1'>
+        <div class="map-yr-cont">
+          <span class="map-yr">A decade ago</span></div>
+        <div class="custom-logo-container-2">
+          <img class="logo-size-2" src="assets/whiteLogoWhiteTextRight.svg" />
+        </div>
+        <div class="custom-logo-container-1">
+          <img class="logo-size-1" src="assets/gavi-logo-en-151.png" />
+        </div>
+      </div>
+      <div id='map2'>
+        <div class="map-yr-cont">
+          <span class="map-yr">Today</span></div>
+        <div class="custom-logo-container-2">
+          <img class="logo-size-2" src="assets/whiteLogoWhiteTextRight.svg" />
+        </div>
+        <div class="custom-logo-container-1">
+          <img class="logo-size-1" src="assets/gavi-logo-en-151.png" />
+        </div>
+      </div>
+
+    </div>
+
+    <div id="side-bar-container-two"></div>
+  </div>
+
+  <script src="js/main.js"></script>
+
+  <body>
+
+</html>

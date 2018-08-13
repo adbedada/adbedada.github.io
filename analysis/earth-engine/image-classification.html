@@ -1,0 +1,149 @@
+<html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700" rel="stylesheet">
+<link href="css/code-highlight-foundation.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+<script src="highlight/highlight.pack.js"></script>
+<style></style>
+
+<body>
+  <div>
+
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <div class="title-container">
+
+      <p class="main-title"> NDVI & Time-Series Analysis using GEE</p>
+
+      <!-- <p class="sub-title"> </p> -->
+
+    </div>
+    <div class="text-container">
+      Google Earth Engine provides plotera of publicly available satellite images
+      collected over 40 years. On this introductory tutorial, we will take a look
+      how to access, visualize and export an image.
+    </div>
+
+    <div class="text-container">
+    We will begin the process by specifying the type of satellite imagery we want to access.
+    For this tutorial, we will request images from the SENTINEL-2 Multi-Spectral Imaging mission.
+    </div>
+
+    <div class="code-container">
+      <pre class="color-bewer">
+<code>
+//Sentinel-2 TOA reflectance Image
+var S2 = ee.ImageCollection('COPERNICUS/S2');
+  </code>
+    </pre>
+    </div>
+    <div class="text-container">
+    We declared a variable name 'S2' to connect to Sentinel-2 images
+    identified by the unique id 'COPERNICUS/S2'. Next, we will create a variable name
+    to store the boundary of the country we want an image for.
+    </div>
+    <div class="code-container">
+      <pre class="color-bewer" style="width:600px !important;">
+<code>
+// Get the boundary layer
+var India = ee.FeatureCollection('ft:1tdSwUL7MVpOauSgRzqVTOwdfy17KDbw-1d9omPw')
+  .filter(ee.Filter.eq('Country', 'India'));
+  </code>
+    </pre>
+    </div>
+    <div class="text-container">
+The boundary information is stored in Google's Fusion Table identified by its unique
+key id and from a list 231 countries, in the code above, we requested for India.
+    </div>
+    <div class="text-container">
+      The next step of the analysis involves removing (masking) the cloud cover.
+      Sentinel-2 comes with dense clouds and cirrus clouds masks at 60 m spatial
+      resolution and with the following function, we will combine the two,
+      mask the original image and return a scaled layer.
+    </div>
+    <div class="code-container">
+      <pre class="color-bewer"><code>
+// Function to mask clouds using the Sentinel-2 QA band.
+function maskS2clouds(image) {
+
+// Get QA bands with 60 meters resolution
+var qa = image.select('QA60');
+var cloudBitMask = ee.Number(2).pow(10).int();
+var cirrusBitMask = ee.Number(2).pow(11).int();
+
+// Create mask using the Bit-Wise 'AND' Operator
+var mask = qa.bitwiseAnd(cloudBitMask).eq(0).and(
+           qa.bitwiseAnd(cirrusBitMask).eq(0));
+
+// Return the masked and scaled image
+return image.updateMask(mask).divide(10000)
+.copyProperties(image, ["system:time_start"]);
+}
+    </code>
+  </pre>
+    </div>
+    <div class="text-container">
+      Next, we will use this masking variable and filtering functions to create
+       the final image.
+    </div>
+
+    <div class="code-container">
+      <pre class="color-bewer"><code>
+// Filter and pre-process
+var S2_preProcessed = S2.filterDate('2017-01-01', '2017-12-31')
+                      .filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE', 3))
+                      .map(maskS2clouds)
+                      .median() // Return the Median Value
+  </code>
+
+</pre>
+    </div>
+    <div class="text-container">
+  The pre-processing involved filtering the original image collection by
+  a specific date (2017) percent of cloud cover (3), cloud mask (mask2clouds) and,
+  finally, the median values. Next, we will select the 4 bands with 10 meters
+  resolution and clip scene image to the study area.
+    </div>
+    <div class="code-container">
+      <pre class="color-bewer"><code>
+//Bands with 10 meters resolution
+var bands = ['B2', 'B3', 'B4', 'B8'];
+
+// Select bands and location of the study area
+var image = S2_preProcessed.select(bands)
+                            .clip(study_area);
+  </code>
+
+</pre>
+    </div>
+    <div class="text-container">
+      Let's go ahead and visualize the image.
+    </div>
+    <div class="code-container">
+      <pre class="color-bewer"><code>
+// Visualize False-Color Composite
+Map.addLayer(image,
+            {bands: ['B8', 'B4', 'B3'],
+            max: 0.4}, 'Sentinel 2');
+  </code>
+
+</pre>
+    </div>
+
+    <div class="img-container">
+      <img class="img" src="assets/study_area_false_color.png">
+    </div>
+    <div class="text-container">
+    Now that we correctly depicted the image, lets create the NDVI layer.
+    To do so, we'll call the 'normalizedDifference' function on the NIR (B8) and Red (B4) Bands.
+    </div>
+
+  </div>
+</body>
+
+</html>

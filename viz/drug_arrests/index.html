@@ -1,0 +1,50 @@
+<html>
+<meta charset = "UTF-8">
+<!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"/> -->
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+<link href="css/d3-drug-use.css" rel ="stylesheet"/>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<style>
+
+</style>
+
+<body>
+<div id="viz-header">
+  <h1 class="viz-title"> Drug Use Related Incarceration in the U.S</h1>
+</div>
+  <span id="tabs-container">
+      <input id="tab1" type="radio" name="tabs" checked>
+      <label for="tab1">1989 - 1992</label>
+
+      <input id="tab2" type="radio" name="tabs">
+      <label for="tab2">1999 - 2002 </label>
+
+      <input id="tab3" type="radio" name="tabs">
+      <label for="tab3">2009 - 2012 </label>
+
+</div>
+
+  <section id="content1">
+  <div class="map-1"></div>
+  <div class ="tootltip"></div>
+      <div class="barGraph2"></div>
+  <script src="js/drug-related-arrests-map1.js" ></script>
+</section>
+  <section id="content2">
+    <div class="map-2"></div>
+    <div class ="tootltip"></div>
+  <script src="js/drug-related-arrests-map2.js" ></script>
+  </section>
+  <section id="content3">
+    <div class="map-3"></div>
+    <div class ="tootltip"></div>
+  <script src="js/drug-related-arrests-map3.js" ></script>
+  </section>
+</body>
+</html>

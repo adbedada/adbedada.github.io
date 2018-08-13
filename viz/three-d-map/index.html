@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>3D Map </title>
+	 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
+        <script type="text/javascript" src ="../../assets/js/mapbox-3d-tour.js"></script>
+<style>
+
+body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:100%; }
+
+.viz_container{
+
+  min-height:20px;
+  width:100%;
+  margin:25px 0px 25px 0px;
+  float:left;
+}
+
+.map-overlay-container {
+    position: relative;
+    width: 1%;
+
+    padding: 10px;
+    z-index: 1;
+}
+
+.map-overlay {
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    box-shadow:0 1px 2px rgba(0,0,0,0.20);
+}
+
+.map-overlay h2,
+.map-overlay p {
+    margin: 0 0 10px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+<div class = "viz_container">
+
+<div id='map'></div>
+
+  </div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGVzdGFuZW9uMSIsImEiOiJjaW94andic2wwMXN0dWNtOGJnNndvajFlIn0._eDLrcUaWTpNHqrb5bQE-Q';
+
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/destaneon1/cj4j72arj3uub2smlk4e8v6kf',
+    center: [-73.959,40.790],
+    maxZoom: 12.5,
+    minZoom: 0,
+    zoom: 10
+});
+
+var title = document.getElementById('location-title');
+var description = document.getElementById('location-description');
+
+var locations = [{
+    "id": "1",
+
+    "camera": {
+        center: [-74.001,40.723],
+        zoom: 13.0,
+        bearing: 26.5,
+        pitch: 46
+
+    }
+}, {
+    "id": "2",
+    "camera": {
+        center: [-73.966,40.760],
+        bearing: -15.00,
+        pitch: 42,
+        zoom: 11,
+
+
+
+    }
+}, {
+    "id": "3",
+    "camera": {
+        center: [-73.977,40.768],
+        bearing: -65.0,
+        pitch: 40,
+        zoom: 12.5
+    }
+}, {
+    "id": "4",
+    "camera": {
+        center: [-73.934,40.8],
+        bearing: -95,
+        pitch: 35,
+        zoom: 11.37
+    }
+}, {
+    "id": "5",
+
+    "camera": {
+        center: [-73.937,40.854],
+        bearing: -160,
+        pitch: 60,
+        zoom: 12.8
+    }
+}, {
+    "id": "6",
+    "camera": {
+        center: [-73.988,40.765],
+        zoom: 12,
+        bearing:109,
+        pitch: 45
+    }
+}, {
+    "id": "7",
+    "camera": {
+        center: [-73.971,40.752],
+        zoom: 10.75,
+        bearing:25,
+        pitch:55
+    }
+
+
+}];
+
+function highlightBorough(code) {
+    map.setFilter('highlight', ["==", "borocode", code]);
+}
+
+function playback(index) {
+
+    map.flyTo(locations[index].camera);
+
+    map.once('moveend', function() {
+        // Duration the slide is on screen after interaction
+        window.setTimeout(function() {
+            // Increment index
+            index = (index + 1 === locations.length) ? 0 : index + 1;
+            playback(index);
+        }, 3000); // After callback, show the location for 3 seconds.
+    });
+}
+
+
+map.on('load', function() {
+
+
+    playback(0);
+});
+</script>
+
+
+
+</body>
+
+</html>
