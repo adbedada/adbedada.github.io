@@ -2,22 +2,24 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/styles.css"></link>
+  <link rel="stylesheet" href="css/styles.css">
+  </link>
 
 
   <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,500" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <!-- #<script src ="js/main.js"></script> -->
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
   <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127073166-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127073166-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-      gtag('config', 'UA-127073166-1');
-    </script>
+    gtag('config', 'UA-127073166-1');
+  </script>
 
 </head>
 
@@ -25,372 +27,402 @@
   <div id="fir-bck-cont">
     <div id="first-container">
       <div id="name-container">Adane Bedada</div>
-      <div id="sub-title">Analyst, Visualizer, Coffee-addict </div>
+      <div id="amharic-name-container"> አዳነ ለገሰ በዳዳ</div>
+
     </div>
   </div>
   <div id="thr-bck-cont">
     <span id="tabs-container">
-    <input id="tab1" type="radio" name="tabs" checked>
-    <label for="tab1">Modeling & Analysis </label>
+      <input id="tab3" type="radio" name="tabs" checked>
+      <label for="tab3">About Me </label>
+      <input id="tab1" type="radio" name="tabs">
+      <label for="tab1">Modeling & Analysis </label>
 
-    <input id="tab2" type="radio" name="tabs">
-    <label for="tab2">Visualization </label>
+      <input id="tab2" type="radio" name="tabs">
+      <label for="tab2">Visualization </label>
+      <section id="content1">
+        <div class='proj-cont' style="margin-top:35px">
+          <div class='proj-pic-cont'>
+            <a href="analysis/earth-engine/"> <img class="proj-pic" src="assets/gee.svg" /></a>
+          </div>
+          <div class='proj-title-cont'>
+            <div class=proj-main-title>
+              <a href="analysis/earth-engine/"> Google Earth Engine For Image Analysis</a>
+            </div>
+            <div class=proj-desc>
+              Accessing images, calculating NDVI and time-series analysis using Google Earth Engine
+            </div>
+            <div class=lang-desc>
+              EarthEngine | Javascript
+            </div>
+          </div>
+        </div>
+        <div class='proj-cont'>
+          <div class='proj-pic-cont'>
+            <a href="analysis/opencv_and_sk_image/"><img class="proj-pic" src="assets/open-cv.svg" /></a>
+          </div>
+          <div class='proj-title-cont'>
+            <div class=proj-main-title>
+              <a href="analysis/opencv_and_sk_image/">OpenCV and Scikit-Image</a>
+            </div>
+            <div class=proj-desc>
+              Testing computer vision algorithms for satellite image processing and analysis
+            </div>
+            <div class=lang-desc>
+              Python
+            </div>
+          </div>
+        </div>
 
-    <input id="tab3" type="radio" name="tabs">
-    <label for="tab3">About </label>
-    <section id="content1">
-      <div class='proj-cont' style= "margin-top:35px" >
-        <div class='proj-pic-cont'>
-        <a href="analysis/earth-engine/">  <img class="proj-pic" src="assets/gee.svg" /></a>
-        </div>
-        <div class='proj-title-cont'>
-          <div class=proj-main-title>
-            <a href="analysis/earth-engine/"> Google Earth Engine For Image Analysis</a>
+        <div class='proj-cont'>
+          <div class='proj-pic-cont'>
+            <a href="analysis/part_one_conflict_in_africa/"><img class="proj-pic" src="assets/afri-conf.svg" /></a>
           </div>
-          <div class=proj-desc>
-          Accessing images, calculating NDVI and time-series analysis using Google Earth Engine
-          </div>
-          <div class=lang-desc>
-             EarthEngine | Javascript
-          </div>
-        </div>
-      </div>
-      <div class='proj-cont'>
-        <div class='proj-pic-cont'>
-          <a href="analysis/opencv_and_sk_image/"><img class="proj-pic" src="assets/open-cv.svg" /></a>
-        </div>
-        <div class='proj-title-cont'>
-          <div class=proj-main-title>
-            <a href="analysis/opencv_and_sk_image/">OpenCV and Scikit-Image</a>
-          </div>
-          <div class=proj-desc>
-             Testing computer vision algorithms for satellite image processing and analysis
-          </div>
-          <div class=lang-desc>
-             Python
+          <div class='proj-title-cont'>
+            <div class=proj-main-title>
+              <a href="analysis/part_one_conflict_in_africa/"> Conflicts in Africa - Exploratory Data Analysis
+            </div>
+            <div class=proj-desc>
+              Exploratory data analysis of conflicts based on Historical data collected from ACLED
+            </div>
+            <div class=lang-desc>
+              R
+            </div>
+            </a>
           </div>
         </div>
-      </div>
 
-      <div class='proj-cont'>
-        <div class='proj-pic-cont'>
-          <a href="analysis/part_one_conflict_in_africa/"><img class="proj-pic" src="assets/afri-conf.svg" /></a>
+        <div class='proj-cont'>
+          <div class='proj-pic-cont'>
+            <a href="analysis/spatial_modeling/"><img class="proj-pic" src="assets/gent.svg" /></a>
+          </div>
+          <div class='proj-title-cont'>
+            <div class=proj-main-title>
+              <a href="analysis/spatial_modeling/">Detecting Gentrification with Spatial Regression</a>
+            </div>
+            <div class=proj-desc>
+              Geographical Weighted Regression, Moran's I, & Autoregressive Spatial Model
+            </div>
+            <div class=lang-desc>
+              R
+            </div>
+          </div>
         </div>
-        <div class='proj-title-cont'>
-         <div class=proj-main-title>
-          <a href="analysis/part_one_conflict_in_africa/"> Conflicts in Africa - Exploratory Data Analysis
-          </div>
-          <div class=proj-desc>
-            Exploratory data analysis of conflicts based on Historical data collected from ACLED
-          </div>
-          <div class=lang-desc>
-             R
-          </div>
-          </a>
-        </div>
-      </div>
 
-      <div class='proj-cont'>
-        <div class='proj-pic-cont'>
-          <a href="analysis/spatial_modeling/"><img class="proj-pic" src="assets/gent.svg" /></a>
+        <div class='proj-cont'>
+          <div class='proj-pic-cont'>
+            <a href="analysis/part_three_image_classification"><img class="proj-pic" src="assets/classfn-3.svg" /></a>
+          </div>
+          <div class='proj-title-cont'>
+            <div class=proj-main-title>
+              <a href="analysis/part_three_image_classification">Part III - Machine Learning for Image
+                Classification</a>
+            </div>
+            <div class=proj-desc>
+              Image Enhancement, Decision Trees and XG-Boost Classifer for builtup surface extraction
+            </div>
+            <div class=lang-desc>
+              Python
+            </div>
+          </div>
         </div>
-        <div class='proj-title-cont'>
-          <div class=proj-main-title>
-            <a href="analysis/spatial_modeling/">Detecting Gentrification with Spatial Regression</a>
+        <div class='proj-cont'>
+          <div class='proj-pic-cont'>
+            <a href="analysis/part_two_image_classification/"><img class="proj-pic" src="assets/classfn-2.svg" /></a>
           </div>
-          <div class=proj-desc>
-            Geographical Weighted Regression, Moran's I, & Autoregressive Spatial Model
-          </div>
-          <div class=lang-desc>
-             R
+          <div class='proj-title-cont'>
+            <div class=proj-main-title>
+              <a href="analysis/part_two_image_classification/">Part II - Machine Learning for Image Classification</a>
+            </div>
+            <div class=proj-desc>
+              Multi class image classification with Random Forest and Post Classification Change Detection
+            </div>
+            <div class=lang-desc>
+              Python
+            </div>
           </div>
         </div>
-      </div>
-
-          <div class='proj-cont'>
-            <div class='proj-pic-cont'>
-              <a href="analysis/part_three_image_classification"><img class="proj-pic" src="assets/classfn-3.svg" /></a>
+        <div class='proj-cont'>
+          <div class='proj-pic-cont'>
+            <a href="analysis/part_one_image_classification"><img class="proj-pic" src="assets/classfn-1.svg" /></a>
+          </div>
+          <div class='proj-title-cont'>
+            <div class=proj-main-title>
+              <a href="analysis/part_one_image_classification">Part I - Machine Learning for Image Classification</a>
             </div>
-            <div class='proj-title-cont'>
-              <div class=proj-main-title>
-                <a href="analysis/part_three_image_classification">Part III - Machine Learning for Image Classification</a>
-              </div>
-              <div class=proj-desc>
-                  Image Enhancement, Decision Trees and XG-Boost Classifer for builtup surface extraction
-              </div>
-              <div class=lang-desc>
-                 Python
-              </div>
+            <div class=proj-desc>
+              Supervised (Random Forest) and Unsupervised (K-Means) Image Classifications
+            </div>
+            <div class=lang-desc>
+              Python
             </div>
           </div>
-          <div class='proj-cont'>
-            <div class='proj-pic-cont'>
-              <a href="analysis/part_two_image_classification/"><img class="proj-pic" src="assets/classfn-2.svg" /></a>
+        </div>
+        <div class='proj-cont'>
+          <div class='proj-pic-cont'>
+            <a href="analysis/spectral_analysis_tct/"><img class="proj-pic" src="assets/indices.svg" /></a>
+          </div>
+          <div class='proj-title-cont'>
+            <div class=proj-main-title>
+              <a href="analysis/spectral_analysis_tct/">Spectral Indices and Transformation</a>
             </div>
-            <div class='proj-title-cont'>
-              <div class=proj-main-title>
-                <a href="analysis/part_two_image_classification/">Part II - Machine Learning for Image Classification</a>
-              </div>
-              <div class=proj-desc>
-                  Multi class image classification with Random Forest and Post Classification Change Detection
-              </div>
-              <div class=lang-desc>
-                 Python
-              </div>
+            <div class=proj-desc>
+              Spectral Indicies(NDVI, NDVI, NDVI and NDVI) and Tassled Cap Transformation
+            </div>
+            <div class=lang-desc>
+              Python
             </div>
           </div>
-          <div class='proj-cont'>
-            <div class='proj-pic-cont'>
-              <a href="analysis/part_one_image_classification" ><img class="proj-pic" src="assets/classfn-1.svg" /></a>
-            </div>
-            <div class='proj-title-cont'>
-              <div class=proj-main-title>
-                <a href="analysis/part_one_image_classification" >Part I - Machine Learning for Image Classification</a>
-              </div>
-              <div class=proj-desc>
-                  Supervised (Random Forest) and Unsupervised (K-Means) Image Classifications
-              </div>
-              <div class=lang-desc>
-                 Python
-              </div>
-            </div>
+        </div>
+        <div class='proj-cont'>
+          <div class='proj-pic-cont'>
+            <a href="analysis/filters_vs_pca/"><img class="proj-pic" src="assets/filters.svg" /></a>
           </div>
-          <div class='proj-cont'>
-            <div class='proj-pic-cont'>
-              <a href="analysis/spectral_analysis_tct/"><img class="proj-pic" src="assets/indices.svg" /></a>
+          <div class='proj-title-cont'>
+            <div class=proj-main-title>
+              <a href="analysis/filters_vs_pca/"> Image Filters and Principal Component Analysis</a>
             </div>
-            <div class='proj-title-cont'>
-              <div class=proj-main-title>
-                <a href="analysis/spectral_analysis_tct/">Spectral Indices and Transformation</a>
-              </div>
-              <div class=proj-desc>
-                  Spectral Indicies(NDVI, NDVI, NDVI and NDVI) and Tassled Cap Transformation
-              </div>
-              <div class=lang-desc>
-                 Python
-              </div>
-            </div>
-          </div>
-          <div class='proj-cont'>
-            <div class='proj-pic-cont'>
-              <a href="analysis/filters_vs_pca/"><img class="proj-pic" src="assets/filters.svg" /></a>
-            </div>
-            <div class='proj-title-cont'>
-              <div class=proj-main-title>
-                <a href="analysis/filters_vs_pca/"> Image Filters and Principal Component Analysis</a>
-              </div>
-              <div class=proj-desc>
+            <div class=proj-desc>
               Image enhancment with filters, and dimension reduction with principal component analysis
-              </div>
-              <div class=lang-desc>
-                 Python
-              </div>
+            </div>
+            <div class=lang-desc>
+              Python
             </div>
           </div>
+        </div>
 
-          <div class='proj-cont'>
-            <div class='proj-pic-cont'>
-                <a href="analysis/exploratory_image_analysis/"><img class="proj-pic" src="assets/eda.svg" /></a>
+        <div class='proj-cont'>
+          <div class='proj-pic-cont'>
+            <a href="analysis/exploratory_image_analysis/"><img class="proj-pic" src="assets/eda.svg" /></a>
+          </div>
+          <div class='proj-title-cont'>
+            <div class=proj-main-title>
+              <a href="analysis/exploratory_image_analysis/">Exploratory Image Analysis</a>
             </div>
-            <div class='proj-title-cont'>
-              <div class=proj-main-title>
-                <a href="analysis/exploratory_image_analysis/">Exploratory Image Analysis</a>
-              </div>
-              <div class=proj-desc>
-                Lessons from meta data, statistical summary and color composites
-              </div>
-              <div class=lang-desc>
-                 Python
-              </div>
+            <div class=proj-desc>
+              Lessons from meta data, statistical summary and color composites
+            </div>
+            <div class=lang-desc>
+              Python
             </div>
           </div>
+        </div>
         <div id="section-end"></div>
-            <br></br>
-    </section>
-    <section id="content2">
-      <div class='viz-cont'  style= "margin-top:35px">
-        <div class='viz-pic-cont'>
-          <img class="viz-pic" src="viz/viz-title-bkground/highway_fatalities.png" />
+        <br></br>
+      </section>
+      <section id="content2">
+        <div class='viz-cont' style="margin-top:35px">
+          <div class='viz-pic-cont'>
+            <img class="viz-pic" src="viz/viz-title-bkground/highway_fatalities.png" />
             <div class="viz-title-cont-bkg">
-                <div class='viz-title-cont'>
-                    <div class=viz-main-title>
-                          <a href="viz/highway_fatalities">Fatalities on U.S. Highways </a>
-                    </div>
-                    <div class=viz-desc>
-                     Fatalities in 2015 due to accidents on highways.
-                      </div>
-                    <div class=lang-desc>
-                     DC.js | Mapbox
-                    </div>
+              <div class='viz-title-cont'>
+                <div class=viz-main-title>
+                  <a href="viz/highway_fatalities">Fatalities on U.S. Highways </a>
+                </div>
+                <div class=viz-desc>
+                  Fatalities in 2015 due to accidents on highways.
+                </div>
+                <div class=lang-desc>
+                  DC.js | Mapbox
+                </div>
               </div>
+            </div>
           </div>
-      </div>
-      </div>
+        </div>
 
         <div class='viz-cont' style="margin-top:35px">
           <div class='viz-pic-cont'>
             <img class="viz-pic" src="viz/viz-title-bkground/cities.svg" />
-              <div class="viz-title-cont-bkg">
-                  <div class='viz-title-cont'>
-                      <div class=viz-main-title>
-                            <a href="viz/urban_population">Population size of Cities</a>
-                      </div>
-                      <div class=viz-desc>
-                      Chrome Experment visualizaition of population size data for 7,314 Cities
-                        </div>
-                      <div class=lang-desc>
-                      WebGL
-                      </div>
-                </div>
-            </div>
-        </div>
-      </div>
-      <div class='viz-cont'>
-        <div class='viz-pic-cont'>
-          <img class="viz-pic" src="viz/viz-title-bkground/commute.svg" />
             <div class="viz-title-cont-bkg">
-                <div class='viz-title-cont'>
-                    <div class=viz-main-title>
-                          <a href="viz/commute">Commute to Work Flow </a>
-                    </div>
-                    <div class=viz-desc>
-                      Share of commute to and from 28 counties incorporated in metropolitan Atlanta
-                      </div>
-                    <div class=lang-desc>
-                     D3.js
-                    </div>
-              </div>
-          </div>
-      </div>
-    </div>
-    <div class='viz-cont'>
-      <div class='viz-pic-cont'>
-        <img class="viz-pic" src="viz/viz-title-bkground/vaccination.svg" />
-          <div class="viz-title-cont-bkg">
               <div class='viz-title-cont'>
-                  <div class=viz-main-title>
-                        <a href="viz/children_vaccination">Change in Vaccination Cover</a>
-                  </div>
-                  <div class=viz-desc>
-                  Data driven 3D map of change in children's vaccination cover in three african cities
-                    </div>
-                  <div class=lang-desc>
-                   Mapbox | R
-                  </div>
-            </div>
-        </div>
-    </div>
-  </div>
-  <div class='viz-cont'>
-    <div class='viz-pic-cont'>
-      <img class="viz-pic" src="viz/viz-title-bkground/crime_map.png" />
-        <div class="viz-title-cont-bkg">
-            <div class='viz-title-cont'>
                 <div class=viz-main-title>
-                      <a href="viz/dc_crime">Crime in Washington DC</a>
+                  <a href="viz/urban_population">Population size of Cities</a>
                 </div>
                 <div class=viz-desc>
-                Geographic distribution of crimes reported in washington DC(2015)
-                  </div>
+                  Chrome Experment visualizaition of population size data for 7,314 Cities
+                </div>
                 <div class=lang-desc>
-                MS-Excel
+                  WebGL
                 </div>
+              </div>
+            </div>
           </div>
-      </div>
-  </div>
-</div>
-<div class='viz-cont'>
-  <div class='viz-pic-cont'>
-    <img class="viz-pic" src="viz/viz-title-bkground/agumented_map.png" />
-      <div class="viz-title-cont-bkg">
-          <div class='viz-title-cont'>
-              <div class=viz-main-title>
-                    <a href="viz/agumented_viz">AR Visualization </a>
-              </div>
-              <div class=viz-desc>
-              Agumented Reality visualization of a mountiain in Ethiopia
-                </div>
-              <div class=lang-desc>
-               Mapbox  | Unity | AR-kit
-              </div>
         </div>
-    </div>
-</div>
-</div>
-<div class='viz-cont' >
-  <div class='viz-pic-cont'>
-    <img class="viz-pic" src="viz/viz-title-bkground/incarceration.svg" />
-      <div class="viz-title-cont-bkg">
-          <div class='viz-title-cont'>
-              <div class=viz-main-title>
+        <div class='viz-cont'>
+          <div class='viz-pic-cont'>
+            <img class="viz-pic" src="viz/viz-title-bkground/commute.svg" />
+            <div class="viz-title-cont-bkg">
+              <div class='viz-title-cont'>
+                <div class=viz-main-title>
+                  <a href="viz/commute">Commute to Work Flow </a>
+                </div>
+                <div class=viz-desc>
+                  Share of commute to and from 28 counties incorporated in metropolitan Atlanta
+                </div>
+                <div class=lang-desc>
+                  D3.js
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='viz-cont'>
+          <div class='viz-pic-cont'>
+            <img class="viz-pic" src="viz/viz-title-bkground/vaccination.svg" />
+            <div class="viz-title-cont-bkg">
+              <div class='viz-title-cont'>
+                <div class=viz-main-title>
+                  <a href="viz/children_vaccination">Change in Vaccination Cover</a>
+                </div>
+                <div class=viz-desc>
+                  Data driven 3D map of change in children's vaccination cover in three african cities
+                </div>
+                <div class=lang-desc>
+                  Mapbox | R
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='viz-cont'>
+          <div class='viz-pic-cont'>
+            <img class="viz-pic" src="viz/viz-title-bkground/crime_map.png" />
+            <div class="viz-title-cont-bkg">
+              <div class='viz-title-cont'>
+                <div class=viz-main-title>
+                  <a href="viz/dc_crime">Crime in Washington DC</a>
+                </div>
+                <div class=viz-desc>
+                  Geographic distribution of crimes reported in washington DC(2015)
+                </div>
+                <div class=lang-desc>
+                  MS-Excel
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='viz-cont'>
+          <div class='viz-pic-cont'>
+            <img class="viz-pic" src="viz/viz-title-bkground/agumented_map.png" />
+            <div class="viz-title-cont-bkg">
+              <div class='viz-title-cont'>
+                <div class=viz-main-title>
+                  <a href="viz/agumented_viz">AR Visualization </a>
+                </div>
+                <div class=viz-desc>
+                  Agumented Reality visualization of a mountiain in Ethiopia
+                </div>
+                <div class=lang-desc>
+                  Mapbox | Unity | AR-kit
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='viz-cont'>
+          <div class='viz-pic-cont'>
+            <img class="viz-pic" src="viz/viz-title-bkground/incarceration.svg" />
+            <div class="viz-title-cont-bkg">
+              <div class='viz-title-cont'>
+                <div class=viz-main-title>
                   <a href="viz/drug_arrests">Drug-Use Related Incarceration</a>
-              </div>
-              <div class=viz-desc>
-               Three decade spanning spatial and temporal change in drug use related arrests in the U.S.
                 </div>
-              <div class=lang-desc>
-               D3.js
-              </div>
-        </div>
-    </div>
-</div>
-</div>
-<div class='viz-cont'>
-  <div class='viz-pic-cont'>
-    <img class="viz-pic" src="viz/viz-title-bkground/three-d-map.png" />
-      <div class="viz-title-cont-bkg">
-          <div class='viz-title-cont'>
-              <div class=viz-main-title>
-                    <a href="viz/three-d-map">3D Tour Map </a>
-              </div>
-              <div class=viz-desc>
-              Customized webgl for a simple 3d tour map
+                <div class=viz-desc>
+                  Three decade spanning spatial and temporal change in drug use related arrests in the U.S.
                 </div>
-              <div class=lang-desc>
-               Mapbox
+                <div class=lang-desc>
+                  D3.js
+                </div>
               </div>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
-</div>
-    </section>
-    <section id="content3">
-      <div id="circle-container">
-        <div id="big-circle">
-          <img id="big-circle" src="assets/selfie.jpeg" />
+        <div class='viz-cont'>
+          <div class='viz-pic-cont'>
+            <img class="viz-pic" src="viz/viz-title-bkground/three-d-map.png" />
+            <div class="viz-title-cont-bkg">
+              <div class='viz-title-cont'>
+                <div class=viz-main-title>
+                  <a href="viz/three-d-map">3D Tour Map </a>
+                </div>
+                <div class=viz-desc>
+                  Customized webgl for a simple 3d tour map
+                </div>
+                <div class=lang-desc>
+                  Mapbox
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-        <div class='abt-cont'style="margin-top:15px">
+      </section>
+      <section id="content3">
+        <div id="circle-container">
+          <div id="big-circle">
+            <img id="big-circle" src="assets/selfie.jpeg" />
+          </div>
+        </div>
+        <div class='abt-cont' style="margin-top:15px">
           <div class='abt-title-cont'>
 
             <div class=abt-desc>
 
-              I am Adane (Eddie) Bedada -  analyst, geo-visualization enthusiast and an aspiring geospatial data scientist
-              who regularly drinks black coffee.
+              Hi, My name is Adane (Eddie) Bedada and I'm a Geospatial Data Scientist.
               <br></br>
 
-              Currently, I am a graduate student at the George Washington University where I'm supervised by Ryan Engstrom and Mike Mann.
-               My academic research and work experiences are in satellite image processing, geospatial modeling as well as data visualization.
-               I'm also interested in learning and applying machine and deep learning techniques for geospatial data. Hence, most of the stuff
-               you will find here are notebooks created as I am exploring in this direction.
+              I'm primarly interested in using geospatial to study geographic patterns. My academic training is in
+              digital image processing techniques, spatial time-series modeling and machine learning.
+
               <br></br>
-               <!-- Before graduate school, I was a GIS Analyst in Atlanta, GA and a bit before that, I was in college in Ethiopia where
-               I completed my BA and MSc in Geography with a concentration in GIS.  <br></br> -->
+              My academic research and work experience include:</br>
+              <p class='list_indent'>- developing object detection models (recent)</p>
+              <p class='list_indent'>- researching advesarial machine learning for overhead imagery </p>
+              <p class='list_indent'>- studying the change in vaccination pattern in 10 African cities</p>
+              <p class='list_indent'>- detecting the spatial pattern of wild-fire in California </p>
+              <p class='list_indent'>- leveraging imagery to study built-up in Sri Lanka, Belize and
+                Tanzania</p>
+              <p class='list_indent'>- producing maps for outdoor led light installation in Atlanta, GA</p>
+              <br>
 
-              <strong>tldr; </strong> </br>
-               I LOVE data analysis and visualization as long as location is involved. <br> </br>
+              I recieved my MSc in Geography with a focus on Machine Learning and GIS from the George Washington
+              University, MSc in Geography as well as BA in Geography and Environemntal Studies
+              from two academic institutions in Ethiopia.
+
+              <br></br>
+              <div id="amharic-text-title">ሠላም፡ </div>
+              </br>
+              <div id="amharic-text">ስሜ አዳነ ለገሰ በዳዳ ይባላል። የመልክዐ-ምድር መረጃ ሳይንስ ባለሙያ ነኝ።
+                በመንኮራኮር ወይም በሳተላይት የሚነሱ ምስሎችን በማጥናት በሰው ልጆችና
+                በተፈጥሮአዊ ምድር መካከል ያለውን ጥመራት የሚያሳዩ ጥናቶችንና ሰራዎችን እሰራለሁ።
+
+                <br></br>
+
+                የስራ ልምዴ የተለያዩ ምርምሮችና ተግባራቶችን ያካተተ ሲሆን ከነዚህም መካከል የሚከተሉት ይገኙበታል።
+                <br></br>
+                <p class='list_indent'> - በሳተላይት ምስል ላይ የሚታዩ መኪኖችን የሚያገናዝብና የሚቆጥር መሳሪያ </p>
+                <p class='list_indent'> - በካሊፎርኒያ የሚነሳውን የነድድ-አሳት የምድራዊ ስርዐትና ስፋት መገምገም </p>
+                <p class='list_indent'> - በስሪላንካ፣ ቤሊዝና ታንዛኒያ ሃገሮች ላይ ያለውን ሰው ሰራሽ ምድር መለየት </p>
+                <p class='list_indent'> - የህጻናት ክትባት በአፍሪካ አሃጉር በሚግኙ አስር ከተሞች ላይ ያመጣውን ለውጥ የሚያሳይ ጥናት </p>
+
+                </br>
+
+                ሁለተኛውን የማስተርስ ዲግዬን ከጂዎርጅ ዋሸንግተን ዩኒቨርሲቲ በመልክዐ-ምድር ጥናት እንዲሁም አንደኛውን የማስተርስ ድግዬን ከመቀሌ ዩኒቨርሲቲ
+                እና የመጀምሪያ ዲግሪ ከወለጋ ዩኒቨርሲቲ በመልክዐ መድርና አካባቢያዊ ጥናት ላይ ተቀብያለሁ።
+              </div>
 
 
-              Thank you for stopping by!
+              <br></br>
+              <div class="icons-container">
 
-            <br></br>
-
-            <div class ="icons-container">
-
-              <a href ="https://www.linkedin.com/in/adanebedada/"><img class="soc-icons" src="assets/social_media_icons/linkedin.png"/></a>
-              <a href ="https://github.com/adbedada"><img class="soc-icons" src="assets/social_media_icons/github.png"/></a>
-              <a href ="https://twitter.com/destaneon"><img class="soc-icons" src="assets/social_media_icons/twitter.png"/></a>
-              <a href ="mailto:@adbedada.gmail.com"><img class="soc-icons" src="assets/social_media_icons/e-mail.png"/></a>
+                <a href="https://www.linkedin.com/in/adbe/"><img class="soc-icons"
+                    src="assets/social_media_icons/linkedin.png" /></a>
+                <a href="https://github.com/adbeda"><img class="soc-icons"
+                    src="assets/social_media_icons/github.png" /></a>
+                <a href="https://twitter.com/adbedada"><img class="soc-icons"
+                    src="assets/social_media_icons/twitter.png" /></a>
+                <a href="mailto:@adbedada.gmail.com"><img class="soc-icons"
+                    src="assets/social_media_icons/e-mail.png" /></a>
               </div>
 
 
@@ -398,10 +430,10 @@
           </div>
         </div>
 
-  </section>
-<div class="section_end_cont"> </div>
-</div>
-</span>
+      </section>
+      <div class="section_end_cont"> </div>
+  </div>
+  </span>
 
 </body>
 
