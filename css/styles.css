@@ -59,7 +59,7 @@ text-decoration:none;
   font-family:EthioLessan-Regular;
 }
 #amharic-text{
-  font-size: 14px;
+  font-size: 13px;
   font-family:jiret;
 }
 
@@ -391,7 +391,6 @@ input:checked + label {
 #tab5:checked ~ #content5 {
   display: block;
 }
-
 
 
 @media only screen  and (max-width : 767px){
