@@ -33,25 +33,25 @@ text-decoration:none;
 #first-container{
   width:975px;
   margin:0 auto;
-  height:250px;
+  height:600px;
   background-color: #fff;
   overflow: hidden;
 }
 
 #name-container{
   margin:0 auto;
-  width:400px;
-  padding:75px 0px 45px 75px;
+  width:500px;
+  padding:55px 0px 15px 75px;
   height:50px;
-  font-size: 36px;
+  font-size: 25px;
 
 }
 #amharic-name-container{
   margin:0 auto;
-  width:400px;
-  padding:25px 0px 45px 120px;
+  width:500px;
+  padding:25px 0px 45px 100px;
   height:50px;
-  font-size: 25px;
+  font-size: 20px;
   font-family:sabean;
 }
 #amharic-text-title{
@@ -81,6 +81,93 @@ margin:0 auto;
 .menu-list{
   width:75px;
   float:left;
+}
+
+
+.resume-main-title{
+  margin:0 auto;
+  width:975px;
+  height:20px;
+  padding:0px 0px 15px 0px;
+  text-align: left;
+  font-size:30px;
+}
+.job-date-container{
+  margin:25px 0px 0px 5px;
+  width:200px;
+  min-height: 25px;
+  float:left;
+  position:relative;
+  display: block;
+  float:left;
+}
+.job-title-cont{
+  margin:25px 0px 0px 20px;
+  width:700px;
+  min-height: 25px;
+  float:left;
+  position:relative;
+  display: block;
+  float:left;
+}
+.job-title{
+  line-height: 25px;
+  font-size:16px;
+  font-weight: 300;
+  margin-left:5px;
+  float:left;
+  min-width:50px;
+  position: relative;
+}
+.job-company{
+  line-height: 25px;
+  font-size:14px;
+  font-weight: 300;
+  margin-left:15px;
+  float:left;
+  min-width:50px;
+  position: relative;
+  font-style: italic;
+  color:#888
+}
+.job-date{
+  line-height: 25px;
+  font-size:14px;
+  font-weight: 300;
+  margin-left:15px;
+  float:left;
+  min-width:50px;
+  position: relative;
+  font-style: italic;
+  color:#888
+}
+
+.job-desc{
+  margin:10px 10px 5px 10px;
+  font-size:14px;
+  min-height: 20px;
+  float:left;
+  display:block;
+  position:relative;
+}
+
+
+.project-main-title{
+  margin:0 auto;
+  width:975px;
+  height:100px;
+  padding:25px 0px;
+  text-align: center;
+  font-size:35px;
+   
+}
+.visualization-container{
+    margin:0 auto;
+    width:975px;
+    min-height:15px;
+    overflow: hidden;
+    float:left;
+    color:#777;
 }
 #second-container{
   margin:0 auto;
@@ -115,13 +202,13 @@ margin:0 auto;
 }
 #thr-bck-cont{
   margin:0 auto;
-  width:975px;
+  width:920px;
   min-height:175px;
   background-color: #fff;
 }
 #tabs-container{
-  margin-left:150px;
-  width:975px;
+  margin-left:0px;
+  width:900px;
   min-height: 50px;
 }
 .tab-list{
@@ -152,6 +239,7 @@ margin:0 auto;
   overflow: hidden;
   display: none;
 }
+
 .proj-cont{
   margin:15px 0px 15px 50px;
   width:975px;
@@ -184,14 +272,7 @@ margin:0 auto;
   display: block;
   float:left;
 }
-.proj-main-title{
-  line-height: 25px;
-  font-size:1.3em;
-  font-weight: 300;
-  margin-left:5px;
-  float:left;
-  position: relative;
-}
+
 .proj-desc{
   margin:15px 10px 5px 10px;
   width:100%;
@@ -216,6 +297,7 @@ margin:0 auto;
   position: relative;
     border-radius: 2px;
 }
+
 .viz-pic{
   width:100%;
   height:275px;
@@ -259,7 +341,7 @@ margin:0 auto;
 .lang-desc{
   margin:5px 10px;
   width:275px;
-  font-size:13px;
+  font-size:12px;
   min-height: 20px;
   float:left;
   display:block;
@@ -274,8 +356,8 @@ margin:0 auto;
 }
 #circle-container{
   margin:0 auto;
-  width:150px;
-  padding: 5em 2em 2em 1em;
+  width:250px;
+  padding: 10em 2em 0em 1em;
   float:left;
   position: relative;
   display:block;
@@ -291,7 +373,7 @@ margin:0 auto;
 }
 .abt-cont{
   margin:0px 20px;
-  width:600px;
+  width:500px;
   height:175px;
   float:left
 }
@@ -304,17 +386,17 @@ margin:0 auto;
 }
 .abt-main-title{
   margin:5px 0px 0px 45px;
-  font-size:14px;
+  font-size:12px;
   float:left;
   position: relative;
   line-height: 25px;
 }
 .abt-desc{
   line-height: 25px;
-  margin:5px 0px 5px 100px;
-  width:650px;
-  height:500px;
-  font-size:14px;
+  margin:5px;
+  width:600px;
+  height:575px;
+  font-size:13px;
   min-height: 50px;
   float:left;
   display:block;
@@ -329,8 +411,8 @@ margin:0 auto;
   float:left
 }
 .soc-icons{
-	height:32px;
-	width:32px;
+	height:25px;
+	width:25px;
 	position: relative;
 	float: left;
 	margin: 5px 10px;
@@ -340,7 +422,7 @@ margin:0 auto;
 	width:100%;
   height:90px;
     text-align: left;
-    margin:10px 10px 0px 10px;
+    margin:60px 10px 0px 10px;
    	position: relative;
 	float: left;
 }
@@ -412,7 +494,10 @@ input:checked + label {
   float: left;
   display: block;
 }
-.thr-sub-1{
+
+
+
+/* .thr-sub-1{
   width:90%;
   height:250px;
   margin:1em 2em;
@@ -431,4 +516,5 @@ input:checked + label {
   float: left;
   display: inline;
   overflow:hidden;
-}
+} */
+
