@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 body{
-font-family: 'Roboto Mono', monospace !important;
+/* font-family: 'Roboto Mono', monospace !important; */
+font-family: 'Lato', sans-serif;
 color:#000 !important;
 }
 @font-face{
@@ -396,7 +397,7 @@ margin:0 auto;
   margin:5px;
   width:600px;
   height:575px;
-  font-size:13px;
+  font-size:15px;
   min-height: 50px;
   float:left;
   display:block;
